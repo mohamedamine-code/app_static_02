@@ -63,158 +63,159 @@ class test extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Container(
-              child: Text(
-                "Welcome ! 😉",
-                style: TextStyle(
-                  fontSize: 37,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(40),
-              alignment: Alignment.center,
-              height: 300,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(135, 184, 183, 183),
-                borderRadius: BorderRadius.circular(10),
+            // Container(
+            //   child: Text(
+            //     "Welcome ! 😉",
+            //     style: TextStyle(
+            //       fontFamily: "MyFont01cxc",
+            //       fontSize: 37,
+            //       fontWeight: FontWeight.w700,
+            //       color: Colors.white,
+            //     ),
+            //   ),
+            //   margin: EdgeInsets.all(10),
+            //   padding: EdgeInsets.all(40),
+            //   alignment: Alignment.center,
+            //   height: 300,
+            //   decoration: BoxDecoration(
+            //     color: const Color.fromARGB(135, 184, 183, 183),
+            //     borderRadius: BorderRadius.circular(10),
+            //   ),
+            // ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(30),
+              child: Image.network(
+                "https://images.wallpapersden.com/image/download/solo-leveling-4k-digital_bW1paWmUmZqaraWkpJRnZWhsrW5mbg.jpg",
+                // width: 300,
+                // height: 200,
+                width: double.infinity,
+                height: double.infinity,
               ),
             ),
-            Wrap(
-              direction: Axis.vertical,
-              alignment: WrapAlignment.start,
-              spacing: 10.5,
-              runSpacing: 10.2,
-              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                ElevatedButton(
-
-                  onPressed: () {
-                    print("yoo is clicked");
-                  },
-                  child: Text(
-                    "Valider",
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: const Color.fromARGB(255, 23, 1, 1),
+            Container(
+              width: 200,
+              alignment: Alignment.center,
+              color: Colors.yellow[700],
+              height: 300,
+              child: Wrap(
+                direction: Axis.horizontal,
+                alignment: WrapAlignment.start,
+                spacing: 10.5,
+                runSpacing: 10.2,
+                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  
+                  ElevatedButton(
+              
+                    onPressed: () {
+                      print("yoo is clicked");
+                    },
+                    child: Text(
+                      "1",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: const Color.fromARGB(255, 23, 1, 1),
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
+                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
+                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  style: ButtonStyle(
-                    backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                    //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                    padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                  ),
-                ),
-                ElevatedButton(
-
-                  onPressed: () {
-                    print("yoo is clicked");
-                  },
-                  child: Text(
-                    "Valider",
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: const Color.fromARGB(255, 23, 1, 1),
+                  ElevatedButton(
+              
+                    onPressed: () {
+                      print("yoo is clicked");
+                    },
+                    child: Text(
+                      "4",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: const Color.fromARGB(255, 23, 1, 1),
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
+                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
+                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  style: ButtonStyle(
-                    backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                    //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                    padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                  ),
-                ),
-                ElevatedButton(
-
-                  onPressed: () {
-                    print("yoo is clicked");
-                  },
-                  child: Text(
-                    "Valider",
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: const Color.fromARGB(255, 23, 1, 1),
+                  ElevatedButton(
+              
+                    onPressed: () {
+                      print("yoo is clicked");
+                    },
+                    child: Text(
+                      "2",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: const Color.fromARGB(255, 23, 1, 1),
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
+                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
+                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  style: ButtonStyle(
-                    backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                    //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                    padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                  ),
-                ),
-                ElevatedButton(
-
-                  onPressed: () {
-                    print("yoo is clicked");
-                  },
-                  child: Text(
-                    "Valider",
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: const Color.fromARGB(255, 23, 1, 1),
+                  ElevatedButton(
+              
+                    onPressed: () {
+                      print("yoo is clicked");
+                    },
+                    child: Text(
+                      "5",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: const Color.fromARGB(255, 23, 1, 1),
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
+                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
+                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  style: ButtonStyle(
-                    backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                    //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                    padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                  ),
-                ),
-                ElevatedButton(
-
-                  onPressed: () {
-                    print("yoo is clicked");
-                  },
-                  child: Text(
-                    "Valider",
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: const Color.fromARGB(255, 23, 1, 1),
+                  ElevatedButton(
+              
+                    onPressed: () {
+                      print("yoo is clicked");
+                    },
+                    child: Text(
+                      "3",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: const Color.fromARGB(255, 23, 1, 1),
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
+                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
+                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  style: ButtonStyle(
-                    backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                    //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                    padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                  ),
-                ),
-                ElevatedButton(
-
-                  onPressed: () {
-                    print("yoo is clicked");
-                  },
-                  child: Text(
-                    "Valider",
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: const Color.fromARGB(255, 23, 1, 1),
+                  ElevatedButton(
+              
+                    onPressed: () {
+                      print("yoo is clicked");
+                    },
+                    child: Text(
+                      "6",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: const Color.fromARGB(255, 23, 1, 1),
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
+                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
+                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  style: ButtonStyle(
-                    backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                    //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                    padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                  ),
-                ),
-                ElevatedButton(
-
-                  onPressed: () {
-                    print("yoo is clicked");
-                  },
-                  child: Text(
-                    "Valider",
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: const Color.fromARGB(255, 23, 1, 1),
-                    ),
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                    //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                    padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                  ),
-                ),
-
-              ],
+              
+                ],
+              ),
             ),
             Container(
               child: Text(
