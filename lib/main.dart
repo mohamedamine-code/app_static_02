@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData.light(),
+      theme: ThemeData.light(useMaterial3: true),
       debugShowCheckedModeBanner: false,
       home: test(),
     );
@@ -28,272 +28,152 @@ class test extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.face_5,
-            size: 33,
-          ),
-        ),
         title: Text(
           "ISIMG",
           style: TextStyle(
-            fontSize: 33,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 121, 49, 2),
+            fontFamily: "MyFont",
+            fontSize: 32,
+            fontWeight: FontWeight.w300,
+            color: Colors.amber[900],
           ),
         ),
-        elevation: 5.5,
         centerTitle: true,
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.list_outlined, size: 33, color: Colors.black)),
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                size: 33,
-                color: Colors.black,
-              )),
-        ],
+        leading: IconButton(
+            onPressed: () {
+              print("leading 01");
+            },
+            icon: Icon(
+              Icons.face,
+              size: 33,
+              color: Colors.black,
+            ),
+            ),
+            actions: [
+              IconButton(onPressed: (){}, icon: Icon(Icons.list,size: 33,color: Colors.black,)),
+              IconButton(onPressed: (){}, icon: Icon(Icons.search_sharp,size: 33,color: Colors.black,)),
+            ],
+            elevation: 5.7,
       ),
-      backgroundColor: const Color.fromARGB(255, 1, 72, 4),
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            // Container(
-            //   child: Text(
-            //     "Welcome ! 😉",
-            //     style: TextStyle(
-            //       fontFamily: "MyFont01cxc",
-            //       fontSize: 37,
-            //       fontWeight: FontWeight.w700,
-            //       color: Colors.white,
-            //     ),
-            //   ),
-            //   margin: EdgeInsets.all(10),
-            //   padding: EdgeInsets.all(40),
-            //   alignment: Alignment.center,
-            //   height: 300,
-            //   decoration: BoxDecoration(
-            //     color: const Color.fromARGB(135, 184, 183, 183),
-            //     borderRadius: BorderRadius.circular(10),
-            //   ),
-            // ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Image.network(
-                "https://images.wallpapersden.com/image/download/solo-leveling-4k-digital_bW1paWmUmZqaraWkpJRnZWhsrW5mbg.jpg",
-                // width: 300,
-                // height: 200,
-                width: double.infinity,
-                height: double.infinity,
+        
+
+          Container(
+              child: Text(
+                "Welcome... ! 😎",
+                style: TextStyle(
+                  fontSize: 32,
+                  fontFamily: "MyFont"
+                ),
               ),
-            ),
-            Container(
-              width: 200,
+              padding: EdgeInsets.all(30),
               alignment: Alignment.center,
-              color: Colors.yellow[700],
+              margin: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(76, 153, 153, 153),
+                borderRadius: BorderRadius.circular(15),
+              ),
               height: 300,
-              child: Wrap(
-                direction: Axis.horizontal,
-                alignment: WrapAlignment.start,
-                spacing: 10.5,
-                runSpacing: 10.2,
-                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  
-                  ElevatedButton(
-              
-                    onPressed: () {
-                      print("yoo is clicked");
-                    },
-                    child: Text(
-                      "1",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: const Color.fromARGB(255, 23, 1, 1),
-                      ),
+            ),
+          
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Container(
+                width: 300,
+                child: Wrap(
+                  spacing: 20,
+                  runSpacing: 10,
+                  children: [
+                    ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Colors.blue),
+                    
+                  ),
+                  onPressed: (){},
+                  child: Text(
+                    "Button 01",
+                    style: TextStyle(
+                      fontSize: 19,
                     ),
-                    style: ButtonStyle(
-                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  ElevatedButton(
-              
-                    onPressed: () {
-                      print("yoo is clicked");
-                    },
-                    child: Text(
-                      "4",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: const Color.fromARGB(255, 23, 1, 1),
-                      ),
+                    ElevatedButton(
+                  onPressed: (){},
+                  child: Text(
+                    "Button 02",
+                    style: TextStyle(
+                      fontSize: 19,
                     ),
-                    style: ButtonStyle(
-                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  ElevatedButton(
-              
-                    onPressed: () {
-                      print("yoo is clicked");
-                    },
-                    child: Text(
-                      "2",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: const Color.fromARGB(255, 23, 1, 1),
-                      ),
+                    ElevatedButton(
+                  onPressed: (){},
+                  child: Text(
+                    "Button 03",
+                    style: TextStyle(
+                      fontSize: 19,
                     ),
-                    style: ButtonStyle(
-                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  ElevatedButton(
-              
-                    onPressed: () {
-                      print("yoo is clicked");
-                    },
-                    child: Text(
-                      "5",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: const Color.fromARGB(255, 23, 1, 1),
-                      ),
+                    ElevatedButton(
+                  onPressed: (){},
+                  child: Text(
+                    "Button 04",
+                    style: TextStyle(
+                      fontSize: 19,
                     ),
-                    style: ButtonStyle(
-                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
                     ),
                   ),
-                  ElevatedButton(
-              
-                    onPressed: () {
-                      print("yoo is clicked");
-                    },
-                    child: Text(
-                      "3",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: const Color.fromARGB(255, 23, 1, 1),
-                      ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                    ),
-                  ),
-                  ElevatedButton(
-              
-                    onPressed: () {
-                      print("yoo is clicked");
-                    },
-                    child: Text(
-                      "6",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: const Color.fromARGB(255, 23, 1, 1),
-                      ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor:WidgetStatePropertyAll(Colors.brown),
-                      //backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 93, 33, 243)),
-                      padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
-                    ),
-                  ),
-              
                 ],
-              ),
-            ),
-            Container(
-              child: Text(
-                " Mohmaed Amine 😎 !",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.w200,
                 ),
               ),
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(20),
-              alignment: Alignment.center,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(135, 184, 183, 183),
-                borderRadius: BorderRadius.circular(10),
+          ),
+          
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                "assets/img/1.jpg",
+                width: 350,
               ),
             ),
-            Container(
-              child: Text(
-                " Mohmaed Amine 😎 !",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.w200,
-                ),
-              ),
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(20),
-              alignment: Alignment.center,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(135, 184, 183, 183),
-                borderRadius: BorderRadius.circular(10),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                "assets/img/2.jpg",
+                width: 350,
               ),
             ),
-            Container(
-              child: Text(
-                " Mohmaed Amine 😎 !",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.w200,
-                ),
-              ),
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(20),
-              alignment: Alignment.center,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(135, 184, 183, 183),
-                borderRadius: BorderRadius.circular(10),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                "assets/img/3.jpg",
+                width: 350,
               ),
             ),
-            Container(
-              child: Text(
-                " Mohmaed Amine 😎 !",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.w200,
-                ),
-              ),
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(20),
-              alignment: Alignment.center,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(135, 184, 183, 183),
-                borderRadius: BorderRadius.circular(10),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                "assets/img/4.jpg",
+                width: 350,
               ),
             ),
-          ],
+          ),
+        
+        
+        ],
+        
         ),
       ),
     );
